@@ -14,8 +14,9 @@ interface Props {
 
 const CourseCardItem: FC<Props> = ({ item }) => {
   const router = useRouter()
-  const handleClick = () => {
+  const handleClick: FC = () => {
     router.push('https://api.whatsapp.com/send/?phone=%2B6285270856088&text&type=phone_number&app_absent=0')
+    return(<></>)
   }
 
   return (

@@ -1,9 +1,7 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-import InputBase from '@mui/material/InputBase'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import { StyledButton } from '../styled-button'
 import IconButton from '@mui/material/IconButton'
 import ArrowForward from '@mui/icons-material/ArrowForward'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -12,8 +10,9 @@ import { useRouter } from 'next/router'
 
 const HomeNewsLetter: FC = () => {
   const router = useRouter()
-  const handleClick = () => {
+  const handleClick: FC = () => {
     router.push('https://api.whatsapp.com/send/?phone=%2B6285270856088&text&type=phone_number&app_absent=0')
+    return(<></>)
   }
 
   return (
