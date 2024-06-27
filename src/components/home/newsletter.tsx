@@ -4,8 +4,18 @@ import InputBase from '@mui/material/InputBase'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { StyledButton } from '../styled-button'
+import IconButton from '@mui/material/IconButton'
+import ArrowForward from '@mui/icons-material/ArrowForward'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useRouter } from 'next/router'
+
 
 const HomeNewsLetter: FC = () => {
+  const router = useRouter()
+  const handleClick = () => {
+    router.push('https://api.whatsapp.com/send/?phone=%2B6285270856088&text&type=phone_number&app_absent=0')
+  }
+
   return (
     <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 } }}>
       <Container>
@@ -19,9 +29,9 @@ const HomeNewsLetter: FC = () => {
           }}
         >
           <Typography variant="h1" component="h2" sx={{ mb: 1, fontSize: { xs: 32, md: 42 } }}>
-            Subscribe to Our News Letter
+                Contact Us 
           </Typography>
-          <Typography sx={{ mb: 6 }}>Subscribe to our newsletter to get information about our courses.</Typography>
+          <Typography sx={{  mb: 5 }}>Belajar UKMPPAI tidak pernah semudah ini, Segera bergabung dengan kami</Typography>
 
           <Box
             sx={{
@@ -33,22 +43,25 @@ const HomeNewsLetter: FC = () => {
               mx: 'auto',
             }}
           >
-            <InputBase
-              sx={{
-                backgroundColor: 'background.paper',
-                borderRadius: 3,
-                width: '100%',
-                height: 48,
-                px: 2,
-                mr: { xs: 0, md: 3 },
-                mb: { xs: 2, md: 0 },
-              }}
-              placeholder="Enter your Email Address"
-            />
-            <Box>
-              <StyledButton disableHoverEffect size="large">
-                Subscribe
-              </StyledButton>
+               <IconButton
+                  color="primary"
+                  onClick={handleClick}
+                  sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
+                >
+                  <WhatsAppIcon />
+                </IconButton>
+
+                <Typography sx={{ mb: 1, fontSize: { xs: 28, md: 28 } }}>
+                Hubungi Kami 
+                </Typography>
+            <Box>              
+              <IconButton
+                  color="primary"
+                  onClick={handleClick}
+                  sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
+                >
+                  <ArrowForward />
+                </IconButton>
             </Box>
           </Box>
         </Box>

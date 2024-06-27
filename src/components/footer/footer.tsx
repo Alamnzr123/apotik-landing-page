@@ -19,7 +19,7 @@ const Footer: FC = () => {
                 Apoteker
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-              Apoteker is an online learning platform that has been operating since 2018 until now.
+              Mari bergabung bersama Apoteker+ untuk mencapai impianmu menjadi seorang APOTEKER yang KOMPETEN. Kelas Intensif, Try Out CBT, Latihan Soal, Buku Saku Materi & Rumus. Dibimbing oleh Coach yang berpengalaman dan merupakan praktisi dibidangnya.
               </Typography>
               <FooterSocialLinks />
             </Box>

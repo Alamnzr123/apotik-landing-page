@@ -6,12 +6,18 @@ import Typography from '@mui/material/Typography'
 import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
 import ArrowForward from '@mui/icons-material/ArrowForward'
 import { Course } from '@/interfaces/course'
+import { useRouter } from 'next/router'
 
 interface Props {
   item: Course
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
+  const router = useRouter()
+  const handleClick = () => {
+    router.push('https://api.whatsapp.com/send/?phone=%2B6285270856088&text&type=phone_number&app_absent=0')
+  }
+
   return (
     <Box
       sx={{
@@ -65,6 +71,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           </Box>
           <IconButton
             color="primary"
+            onClick={handleClick}
             sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
           >
             <ArrowForward />

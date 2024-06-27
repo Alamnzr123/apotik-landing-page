@@ -84,7 +84,7 @@ const HomeHero: FC = () => {
                       backgroundColor: 'unset',
                     }}
                   >
-                    Improve{' '}
+                    Platform{' '}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -98,7 +98,7 @@ const HomeHero: FC = () => {
                       <img src="/images/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  your{' '}
+                  Belajar{' '}
                   <Typography
                     component="span"
                     sx={{
@@ -114,7 +114,7 @@ const HomeHero: FC = () => {
                       },
                     }}
                   >
-                    Skill
+                    UKMPPAI
                     <svg version="1.1" viewBox="0 0 3183 3072">
                       <g id="Layer_x0020_1">
                         <path
@@ -133,24 +133,24 @@ const HomeHero: FC = () => {
                     </svg>
                   </Typography>{' '}
                   <br />
-                  with Different Way
+                  No. 1 di Indonesia
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                   {
-                    "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
+                    "Mari bergabung bersama Apoteker+ untuk mencapai impianmu menjadi seorang APOTEKER yang KOMPETEN. Kelas Intensif, Try Out CBT, Latihan Soal, Buku Saku Materi & Rumus. Dibimbing oleh Coach yang berpengalaman dan merupakan praktisi dibidangnya."
                   }
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained" startIcon={<AppleIcon />}>
+                  <StyledButton color="primary" size="large" variant="contained" startIcon={<PlayArrowIcon />} >
                     Playstore
                   </StyledButton>
                 </ScrollLink>
                 <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
+                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<AppleIcon />} >
                     App Store
                   </StyledButton>
                 </ScrollLink>
@@ -158,41 +158,17 @@ const HomeHero: FC = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
-            {/* Sertificate badge */}
             <Box
-              sx={{
-                position: 'absolute',
-                bottom: 30,
-                left: { xs: 0, md: -150 },
-                boxShadow: 1,
-                borderRadius: 3,
-                px: 2,
-                py: 1.4,
-                zIndex: 1,
-                backgroundColor: 'background.paper',
-                display: 'flex',
-                alignItems: 'flex-start',
-                width: 280,
-              }}
-            >
-              <Box
                 sx={{
-                  boxShadow: 1,
-                  borderRadius: '50%',
-                  width: 44,
-                  height: 44,
                   display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mr: 2,
-                  '& img': { width: '32px !important', height: 'auto' },
+                  flexDirection:'row',
                 }}
               >
-              </Box>
-            </Box>
             <Box sx={{ lineHeight: 0 }}>
-              <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" />
+              <Image src="/images/portrait-pretty-teenage-female-holding-books-her-arm-using-pencil-pink-education-conce.png" objectFit='contain' layout={'fill'} alt="Hero img" />
             </Box>
+
+              </Box>
           </Grid>
         </Grid>
 
