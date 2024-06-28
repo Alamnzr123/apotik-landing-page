@@ -150,17 +150,17 @@ const HomeHero: FC = () => {
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
                   <button className='button_logo'>
                   <span className='spanImage'>
-                       <Image src='/images/logo-google-play.webp' width={100} height={50} alt='logoGoogle'/>
+                       <Image src='/images/logo-google-play.webp' width={130} height={50} alt='logoGoogle'/>
                   </span>  
-                  <span>Google Play</span>
+                  <span>Daftar Sekarang</span>
                   </button>                  
                 </ScrollLink>
                 <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
                 <button className='button_logo'>
                   <span className='spanImage'>
-                        <Image src='/images/logo-apps-store.png' width={100} height={50} alt='logoApple'/>
+                        <Image src='/images/logo-apps-store.png' width={130} height={50} alt='logoApple'/>
                   </span>  
-                  <span>App Store</span>
+                  <span>Daftar Sekarang</span>
                   </button>                  
                 </ScrollLink>
               </Box>
