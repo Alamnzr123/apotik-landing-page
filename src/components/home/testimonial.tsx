@@ -78,7 +78,7 @@ const HomeTestimonial: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              {' '}
+              Testimonial What our{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -89,7 +89,7 @@ const HomeTestimonial: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                Why Choose Us {' '}
+                Students{' '}
                 <Box
                   sx={{
                     position: 'absolute',
@@ -102,6 +102,7 @@ const HomeTestimonial: FC = () => {
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
+              Say
             </Typography>
 
             <StyledSlickContainer>
@@ -114,7 +115,7 @@ const HomeTestimonial: FC = () => {
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/university-study-abroad-lifestyle-concept-smiling-cheerful-asian-guy-glasses-standing-.png" width={520} height={540} objectFit={'contain'} quality={97} alt="Testimonial img" />
+              <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" />
             </Box>
           </Grid>
         </Grid>

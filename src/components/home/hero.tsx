@@ -6,8 +6,11 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
-import PlayArrowIcon from '@mui/icons-material/Shop'
-import AppleIcon from '@mui/icons-material/Apple';
+// import PlayArrowIcon from '../../../public/images/logo-google-play.png';
+// import AppleIcon from '../../../public/images/logo-apps-store.png';
+import AppleIcon from '@mui/icons-material/ArrowForward'
+import PlayArrowIcon from '@mui/icons-material/ArrowForward'
+
 
 interface Exp {
   label: string
@@ -145,14 +148,20 @@ const HomeHero: FC = () => {
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained" startIcon={<PlayArrowIcon />} >
-                    Playstore
-                  </StyledButton>
+                  <button className='button_logo'>
+                  <span className='spanImage'>
+                       <Image src='/images/logo-google-play.webp' width={100} height={50} alt='logoGoogle'/>
+                  </span>  
+                  <span>Google Play</span>
+                  </button>                  
                 </ScrollLink>
                 <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<AppleIcon />} >
-                    App Store
-                  </StyledButton>
+                <button className='button_logo'>
+                  <span className='spanImage'>
+                        <Image src='/images/logo-apps-store.png' width={100} height={50} alt='logoApple'/>
+                  </span>  
+                  <span>App Store</span>
+                  </button>                  
                 </ScrollLink>
               </Box>
             </Box>
@@ -167,21 +176,9 @@ const HomeHero: FC = () => {
             <Box sx={{ lineHeight: 0 }}>
               <Image src="/images/portrait-pretty-teenage-female-holding-books-her-arm-using-pencil-pink-education-conce.png" objectFit='contain' layout={'fill'} alt="Hero img" />
             </Box>
-
               </Box>
           </Grid>
         </Grid>
-
-        {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
-          <Grid container spacing={2}>
-            {exps.map((item) => (
-              <Grid key={item.value} item xs={12} md={4}>
-                <ExpItem item={item} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
       </Container>
     </Box>
   )
