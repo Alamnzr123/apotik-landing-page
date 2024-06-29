@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
+import { FooterNavigation } from '@/components/footer'
 
 const Footer: FC = () => {
   return (
@@ -21,7 +21,6 @@ const Footer: FC = () => {
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
               Mari bergabung bersama Apoteker+ untuk mencapai impianmu menjadi seorang APOTEKER yang KOMPETEN. Kelas Intensif, Try Out CBT, Latihan Soal, Buku Saku Materi & Rumus. Dibimbing oleh Coach yang berpengalaman dan merupakan praktisi dibidangnya.
               </Typography>
-              <FooterSocialLinks />
             </Box>
           </Grid>
           <Grid item xs={12} md={7}>

@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Switch from '@mui/material/Switch'
-import Stack from '@mui/material/Stack'
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
+import ToggleButton from '@mui/material/ToggleButton'
 import Slider, { Settings } from 'react-slick'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
@@ -45,48 +45,6 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
   )
 }
 
-const AntSwitch = styled(Switch)(({ theme }) => ({
-  width: 50,
-  height: 16,
-  padding: 0,
-  display: 'flex',
-  '&:active': {
-    '& .MuiSwitch-thumb': {
-      width: 15,
-    },
-    '& .MuiSwitch-switchBase.Mui-checked': {
-      transform: 'translateX(9px)',
-    },
-  },
-  '& .MuiSwitch-switchBase': {
-    padding: 2,
-    '&.Mui-checked': {
-      transform: 'translateX(35px)',
-      color: '#fff',
-      '& + .MuiSwitch-track': {
-        opacity: 1,
-        backgroundColor: theme.palette.mode === 'dark' ? '#177ddc' : '#1890ff',
-      },
-    },
-  },
-  '& .MuiSwitch-thumb': {
-    boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    transition: theme.transitions.create(['width'], {
-      duration: 200,
-    }),
-  },
-  '& .MuiSwitch-track': {
-    borderRadius: 16 / 2,
-    opacity: 1,
-    backgroundColor:
-      theme.palette.mode === 'dark' ? 'rgba(255,255,255,.35)' : 'rgba(0,0,0,.25)',
-    boxSizing: 'border-box',
-  },
-}));
-
 const StyledDots = styled('ul')(({ theme }) => ({
   '&.slick-dots': {
     position: 'absolute',
@@ -108,12 +66,13 @@ const HomePopularCourse: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
   const [checked, setChecked] = React.useState(false);
+  const [selected, setSelected] = React.useState(false);
 
   const handleChange: FC = () => {
+    setSelected(!selected);
     setChecked(!checked);
     return(<></>)
   }
-
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -154,11 +113,21 @@ const HomePopularCourse: FC = () => {
                 justifyContent: { xs: 'center', md: 'flex-start' },
               }}
             >
-              <Stack direction="row" spacing={1} alignItems="center">
-                <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>Online Courses</Typography>
-                <AntSwitch onChange={handleChange} defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
-                <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>Offline Courses</Typography>
-              </Stack>
+             <ToggleButtonGroup
+                   color="primary"
+                   exclusive
+                   aria-label="Platform"
+                   >
+            <ToggleButton
+                   selected={selected}
+                   onChange={handleChange} 
+                   value="android">Online Courses</ToggleButton>
+            <ToggleButton 
+              selected={!selected}
+                    onChange={handleChange}
+                    className='button_logo'
+                    sx={{ '&:hover': { backgroundColor: '#127C71', color: 'primary.contrastText' } }} value="ios">Offline Courses</ToggleButton>
+            </ToggleButtonGroup>
             </Box>
           </Grid>
           {
